@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: yandex-geocoder
+  jackson:
+    default-property-inclusion: non_null
+  codec:
+    max-in-memory-size: 1048576
+
+health:
+  config:
+    enabled: false
+
+# Actuator configuration
+management:
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# Logging level configuration
+logging:
+  level:
+    root: info
+    ru.mvideo: debug
+    org.springframework: info
+    reactor.netty.http.client: debug
+
+yandex-geocoder-details:
+  client:
+    url: ${YANDEX_GEOCODER_CLIENT_URL:https://geocode-maps.yandex.ru/1.x}
+    connection-timeout: 2000
+    read-timeout: 30000
+    format: json
+
+yandex-clients:
+  apiKeys:
+    DDS: ${API_KEY_DDS:0b072760-82dc-47d0-9476-7c4eb0fa829d}
+    chatbot: ${API_KEY_CHATBOT:858f5fac-fef9-4f7f-9a09-54640510d566}
+    SSRV: ${API_KEY_SSRV:31ff6bf7-1a13-4505-af97-5f9ff0c4a585}
+
+opentracing:
+  jaeger:
+    udp-sender:
+      host: ${JAEGER_AGENT_HOST:jaeger-agent.tracing}
+      port: ${JAEGER_AGENT_PORT:5775}
+    enabled: true

@@ -1,0 +1,5 @@
+{
+	"statusCode": 0,
+	"message": "Address wasn't found",
+	"timestamp": "${json-unit.any-number}"
+}

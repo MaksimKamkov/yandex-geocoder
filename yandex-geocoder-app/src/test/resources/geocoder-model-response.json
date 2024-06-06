@@ -1,0 +1,50 @@
+{
+  "request": "Москва, улица Новый Арбат, дом 24",
+  "found": "1",
+  "results": "10",
+  "geoObjects": [
+    {
+      "kind": "house",
+      "text": "Россия, Москва, улица Новый Арбат, 24",
+      "precision": "exact",
+      "geocoderAddress": {
+        "countryCode": "RU",
+        "postalCode": "119019",
+        "formatted": "Москва, улица Новый Арбат, 24",
+        "components":  [
+          {
+            "kind": "country",
+            "name": "Россия"
+          },
+          {
+            "kind": "province",
+            "name": "Центральный федеральный округ"
+          },
+          {
+            "kind": "province",
+            "name": "Москва"
+          },
+          {
+            "kind": "locality",
+            "name": "Москва"
+          },
+          {
+            "kind": "street",
+            "name": "улица Новый Арбат"
+          },
+          {
+            "kind": "house",
+            "name": "24"
+          }
+        ]
+      },
+      "description": "Москва, Россия",
+      "name": "улица Новый Арбат, 24",
+      "boundedBy": {
+        "lowerCorner": "37.583508 55.750768",
+        "upperCorner": "37.591719 55.755398"
+      },
+      "point" : "37.587614 55.753083"
+    }
+  ]
+}

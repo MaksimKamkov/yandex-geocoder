@@ -1,0 +1,5 @@
+{
+	"statusCode": 403,
+	"message": "Failed to get geo data. Status: 403. Error message: Invalid key",
+	"timestamp": "${json-unit.any-number}"
+}

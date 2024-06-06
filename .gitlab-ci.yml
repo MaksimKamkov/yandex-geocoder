@@ -1,0 +1,24 @@
+stages:
+- test
+- test-and-publish
+- visualize
+- build-docker
+- auto-test
+- dev
+- staging
+- production
+- feature
+- upBuildVersion
+- release
+- upPatchVersion
+
+.tags:
+  tags:
+    - kubernetes
+    - sew
+
+include:
+  - project: 'mvideoru/core-services/devops/ci-templates'
+    ref: feature/CD-16
+    file: '/SpringBoot-Maven.gitlab-ci.yml'
+  - local: '/integration-test/AT-runner.gitlab-ci.yml'

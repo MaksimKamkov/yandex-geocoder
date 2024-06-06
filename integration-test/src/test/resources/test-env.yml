@@ -1,0 +1,23 @@
+ env:
+  #Блок переменных для определённого окружения, указывается на запуске как -Denv=local. Если не указано - берётся блок default
+  default:
+    test-data-directory: ${TEST_DATA_DIRECTORY:-testdata/endpoints}
+    application:
+      geocoder:
+        host: ${WEB_ATG_TO_GOODS_ORDERS_HOST:-http://localhost}
+        port: ${WEB_ATG_TO_GOODS_ORDERS_PORT:-8180}
+    stub:
+      host: ${STUB_HOST:-localhost}
+      port: ${STUB_PORT:-52250}
+      mappings: ${STUB_MAPPINGS:-src/test/resources/testdata/stub}
+
+  local:
+    test-data-directory: ${TEST_DATA_DIRECTORY:-testdata/endpoints}
+    application:
+      geocoder:
+        host: ${WEB_ATG_TO_GOODS_ORDERS_HOST:-http://sew-uat-tester-1.yc.mvideo.ru}
+        port: ${WEB_ATG_TO_GOODS_ORDERS_PORT:-8180}
+    stub:
+      host: ${STUB_HOST:-sew-uat-tester-1.yc.mvideo.ru}
+      port: ${STUB_PORT:-52250}
+      mappings: ${STUB_MAPPINGS:-src/test/resources/testdata/stub}

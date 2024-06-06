@@ -1,0 +1,18 @@
+{
+	"request": {
+		"url": "/1.x?geocode=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%90%D1%80%D0%B1%D0%B0%D1%82,%20%D0%B4%D0%BE%D0%BC%2024&apikey=0b072760-82dc-47d0-9476-7c4eb0fa829d&format=json",
+		"method": "GET",
+		"headers": {
+			"Accept": {
+				"equalTo": "application/json"
+			}
+		}
+	},
+	"response": {
+		"status": 403,
+		"bodyFileName": "geocoderpoint/yandex-geocoder-response-500-id340.json",
+		"headers": {
+			"Content-Type": "application/json"
+		}
+	}
+}

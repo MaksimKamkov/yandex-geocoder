@@ -1,0 +1,67 @@
+{
+	"response": {
+		"GeoObjectCollection": {
+			"metaDataProperty": {
+				"GeocoderResponseMetaData": {
+					"request": "Москва, улица Тверская, 7",
+					"found": "1",
+					"results": "10"
+				}
+			},
+			"featureMember": [
+				{
+					"GeoObject": {
+						"metaDataProperty": {
+							"GeocoderMetaData": {
+								"kind": "house",
+								"text": "Россия, Москва, Тверская улица, 7",
+								"precision": "exact",
+								"Address": {
+									"country_code": "RU",
+									"formatted": "Россия, Москва, Тверская улица, 7",
+									"Components": [
+										{
+											"kind": "country",
+											"name": "Россия"
+										},
+										{
+											"kind": "province",
+											"name": "Центральный федеральный округ"
+										},
+										{
+											"kind": "province",
+											"name": "Москва"
+										},
+										{
+											"kind": "locality",
+											"name": "Москва"
+										},
+										{
+											"kind": "street",
+											"name": "Тверская улица"
+										},
+										{
+											"kind": "house",
+											"name": "7"
+										}
+									]
+								}
+							}
+						},
+						"description": "Москва, Россия",
+						"name": "Тверская улица, 7",
+						"boundedBy": {
+							"Envelope": {
+								"lowerCorner": "37.607098 55.755657",
+								"upperCorner": "37.615309 55.760287"
+							}
+						},
+						"Point": {
+							"pos": "37.611203 55.757972"
+						}
+					}
+				}
+			]
+		}
+	}
+}

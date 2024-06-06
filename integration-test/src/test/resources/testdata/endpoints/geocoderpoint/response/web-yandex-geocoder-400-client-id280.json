@@ -1,0 +1,5 @@
+{
+	"statusCode": 0,
+	"message": "Client DD wasn't found",
+	"timestamp": "${json-unit.any-number}"
+}

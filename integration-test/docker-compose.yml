@@ -1,0 +1,27 @@
+version: '2.4'
+services:
+  wiremock:
+    image: rodolpheche/wiremock
+    container_name: wiremock
+    healthcheck:
+      test: "[ $$(curl -s -o /dev/null -w \"%{http_code}\" localhost:52250/__admin/settings) = \"200\" ]"
+      interval: 10s
+      timeout: 1s
+      retries: 30
+    volumes:
+      - ./src/test/resources/testdata/stub:/home/wiremock
+    ports:
+      - "52250:52250"
+    command: [ --port=52250, --local-response-templating, --verbose ]
+
+  geocoder:
+    container_name: geocoder
+    image: ${CI_REGISTRY_IMAGE}/${CI_COMMIT_REF_SLUG}:latest
+    ports:
+      - "8180:8180"
+    environment:
+      SPRING_PROFILES_ACTIVE: autotest
+    restart: always
+    depends_on:
+      wiremock:
+        condition: service_healthy
